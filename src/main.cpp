@@ -1,25 +1,17 @@
-#include <Arduino.h>
+#include <arduino.h>
 
-
-
-void setup() {
-  Serial.begin(115200);
-  Serial.print("afesdzxgds");
-  pinMode(23,OUTPUT);
-  
-  // put your setup code here, to run once:
+void setup()
+{
+    pinMode(23,OUTPUT) //Paso 1
+    Serial.begin(115200); //Paso 2
 }
 
-void loop() {
-  digitalWrite(23,HIGH);
-  Serial.println("ON");
-  Serial.println(temperatureRead());
-  Serial.println(analogRead(15));
-  delay(200);
-
-  digitalWrite(23,LOW);
-  Serial.println("OFF");
-  delay(200);
-
-  // put your main code here, to run repeatedly:
+void loop() //Paso 3
+{
+    digitalWrite(23,HIGH);
+    Serial.println("ON");
+    delay(500);
+    digitalWrite(23,LOW);
+    Serial.println("OFF");
+    delay(500);
 }
